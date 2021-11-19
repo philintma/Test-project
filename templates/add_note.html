@@ -1,0 +1,25 @@
+<html>
+<head>
+    <style>
+        textarea {
+                    /* Выравним многострочные текстовые поля с их текстами-подсказками */
+                    vertical-align: top;
+
+                    /* Предоставим пространство для ввода текста */
+                    height: 30em;
+                    width: 30em;
+                    }
+    </style>
+</head>
+<body>
+<h1>Hello, {{name}}!</h1>
+<form action="/notes/new" method="POST">
+  <label for="fio">Name:</label>
+  <input type="text" name="fio" id="fio" value="anonymous"><br/>
+  <label for="heading">Heading:</label>
+  <input type="text" name="heading" id="heading" value="default heading"><br/>
+  <textarea name="note">Text by default</textarea><br/>
+  <input type="submit">
+</form>
+</body>
+</html>

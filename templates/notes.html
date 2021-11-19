@@ -1,0 +1,12 @@
+
+<html>
+<body>
+<div>
+  {% for note_index in range(notes|length): %}
+    <div>{{notes[note_index]['name']}} made a <a href= "{{ url_for('see_note', note_index = note_index) }}"> note </a> titled "{{notes[note_index]['heading']}}" when it was {{notes[note_index]['time']}}</div>
+    <div> the text: {{notes[note_index]['text']}}  </div>
+  {% endfor %}
+</div>
+<a href="/notes/new">New note</a>
+</body>
+</html>

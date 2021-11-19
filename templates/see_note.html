@@ -1,0 +1,21 @@
+<html>
+<head>
+    <style>
+        textarea {
+                    vertical-align: top;
+                    height: 30em;
+                    width: 30em;
+                    }
+    </style>
+</head>
+<body>
+  <h1> {{heading}} </h1>
+  <h5> author: {{author}} </h5>
+  <textarea name="note">{{text}}</textarea>
+  <div><i>{{time}}</i></div>
+  <div><a href="{{ url_for('delete_note', note_index = note_index) }}"> Delete this note </a></div>
+
+  <div><a href="/notes">All notes</a></div>
+</body>
+</body>
+</html>
